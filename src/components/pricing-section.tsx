@@ -5,75 +5,73 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const pricingPlans = [
+const solutions = [
   {
-    name: "Starter",
-    price: "29",
-    period: "월",
-    description: "개인 사용자와 소규모 팀을 위한 기본 플랜",
-    badge: null,
-    features: [
-      "최대 3개 프로젝트",
-      "기본 분석 도구",
-      "월 10,000 데이터 포인트",
-      "이메일 지원",
-      "기본 대시보드"
-    ]
-  },
-  {
-    name: "Professional",
-    price: "99",
-    period: "월",
-    description: "성장하는 비즈니스를 위한 고급 분석 솔루션",
+    name: "스타트업 패키지",
+    price: "상담 후 결정",
+    period: "",
+    description: "MVP 개발부터 스케일업까지 원스톱 솔루션",
     badge: "Most Popular",
     features: [
-      "무제한 프로젝트",
-      "고급 AI 분석",
-      "월 100,000 데이터 포인트",
-      "우선 지원",
-      "커스텀 대시보드",
-      "API 액세스",
-      "팀 협업 도구"
+      "기술 스택 선정 컨설팅",
+      "MVP 빠른 구축 (4-8주)",
+      "개발팀 구성 지원",
+      "투자 유치 자료 준비",
+      "3개월 무료 유지보수"
     ]
   },
   {
-    name: "Enterprise",
-    price: "299",
-    period: "월",
-    description: "대기업을 위한 완전한 엔터프라이즈 솔루션",
+    name: "기업 솔루션",
+    price: "프로젝트별",
+    period: "견적",
+    description: "대기업을 위한 맞춤형 기술 솔루션",
+    badge: "Enterprise",
+    features: [
+      "전담팀 구성 (3-10명)",
+      "애자일 방법론 적용",
+      "품질 보증 (QA)",
+      "장기 유지보수 지원",
+      "24/7 기술 지원",
+      "온사이트 컨설팅",
+      "레거시 시스템 마이그레이션"
+    ]
+  },
+  {
+    name: "SaaS 플랫폼",
+    price: "월 구독",
+    period: "서비스",
+    description: "BKNIL 등 자체 개발 SaaS 플랫폼 이용",
     badge: "Best Value",
     features: [
-      "무제한 프로젝트",
-      "엔터프라이즈 AI 분석",
-      "무제한 데이터 포인트",
-      "24/7 전담 지원",
-      "화이트라벨 솔루션",
-      "고급 보안 기능",
-      "온프레미스 배포",
-      "커스텀 통합"
+      "AI 기반 백링크 자동 생성",
+      "SEO 최적화 도구",
+      "성과 분석 대시보드",
+      "무제한 사이트 생성",
+      "API 연동 지원",
+      "커스텀 도메인 지원"
     ]
   }
 ]
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-20 sm:py-24 lg:py-32">
+    <section id="solutions" className="py-20 sm:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Simple, Transparent
+            맞춤형 솔루션으로
             <br />
-            <span className="text-primary">Pricing</span>
+            <span className="text-primary">비즈니스 성장을 가속화하세요</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            비즈니스 규모에 맞는 플랜을 선택하고 즉시 스마트 분석을 시작하세요.
+            스타트업부터 대기업까지, 각 단계에 맞는 최적의 기술 솔루션을 제공합니다.
           </p>
         </div>
 
-        {/* Pricing Cards */}
+        {/* Solution Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
-          {pricingPlans.map((plan, index) => (
+          {solutions.map((plan, index) => (
             <Card 
               key={index} 
               className={`relative group hover:shadow-xl transition-all duration-300 ${
@@ -92,8 +90,8 @@ export function PricingSection() {
                 <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                 <CardDescription className="text-base">{plan.description}</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold">₩{plan.price}</span>
-                  <span className="text-muted-foreground">/{plan.period}</span>
+                  <span className="text-2xl sm:text-3xl font-bold">{plan.price}</span>
+                  {plan.period && <span className="text-muted-foreground"> {plan.period}</span>}
                 </div>
               </CardHeader>
 
@@ -113,8 +111,11 @@ export function PricingSection() {
                   className="w-full" 
                   variant={plan.badge === "Most Popular" ? "default" : "outline"}
                   size="lg"
+                  asChild
                 >
-                  {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
+                  <a href="#contact">
+                    {plan.name === "기업 솔루션" ? "견적 문의" : "상담 신청"}
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
@@ -124,10 +125,10 @@ export function PricingSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-12 sm:mt-16">
           <p className="text-muted-foreground mb-4">
-            모든 플랜에 14일 무료 체험이 포함되어 있습니다. 신용카드는 필요하지 않습니다.
+            모든 상담은 무료로 진행됩니다. 프로젝트 규모와 요구사항에 따라 맞춤 견적을 제공합니다.
           </p>
-          <Button variant="link" className="text-primary">
-            자세한 기능 비교 보기 →
+          <Button variant="link" className="text-primary" asChild>
+            <a href="tel:010-3006-9310">지금 바로 상담받기 010-3006-9310 →</a>
           </Button>
         </div>
       </div>

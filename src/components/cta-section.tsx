@@ -5,19 +5,19 @@ import { Button } from "@/components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-primary">
+    <section id="contact" className="py-20 sm:py-24 lg:py-32 bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main CTA Content */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6">
-            Ready to Transform Your
+            프로젝트를 시작할
             <br />
-            Data into Insights?
+            준비가 되셨나요?
           </h2>
           
           <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            지금 바로 StatsAI를 시작하고 14일 무료 체험으로 AI 분석의 힘을 경험해보세요. 
-            신용카드는 필요하지 않습니다.
+            럿지의 전문가들이 귀사의 비즈니스 성장을 위한 최적의 기술 솔루션을 제안해드립니다. 
+            지금 바로 문의하시고 무료 컨설팅을 받아보세요.
           </p>
 
           {/* CTA Buttons */}
@@ -26,32 +26,36 @@ export function CTASection() {
               size="lg" 
               variant="secondary"
               className="text-base px-8 py-4 h-auto min-w-[200px] group"
+              asChild
             >
-              Start Free Trial
-              <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <a href="tel:010-3006-9310">
+                무료 컨설팅 신청
+                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
             <Button 
               size="lg" 
               variant="outline"
               className="text-base px-8 py-4 h-auto min-w-[200px] bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+              asChild
             >
-              Schedule Demo
+              <a href="mailto:milli@molluhub.com">이메일 문의</a>
             </Button>
           </div>
 
-          {/* Trust Indicators */}
+          {/* Contact Info */}
           <div className="mt-12 sm:mt-16 pt-8 border-t border-primary-foreground/20">
-            <p className="text-primary-foreground/60 text-sm mb-6">
-              Trusted by companies worldwide
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60">
-              {/* Placeholder for company logos */}
-              <div className="h-8 w-24 bg-primary-foreground/20 rounded" />
-              <div className="h-8 w-20 bg-primary-foreground/20 rounded" />
-              <div className="h-8 w-28 bg-primary-foreground/20 rounded" />
-              <div className="h-8 w-22 bg-primary-foreground/20 rounded" />
-              <div className="h-8 w-26 bg-primary-foreground/20 rounded" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-primary-foreground/80">
+              <div>
+                <h3 className="font-semibold text-primary-foreground mb-2">전화 문의</h3>
+                <p>010-3006-9310</p>
+                <p>02-931-9310</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-primary-foreground mb-2">이메일 문의</h3>
+                <p>milli@molluhub.com</p>
+              </div>
             </div>
           </div>
         </div>

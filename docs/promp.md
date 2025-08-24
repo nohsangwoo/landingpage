@@ -8,7 +8,7 @@ AI 기반 웹사이트 분석 및 판매 플랫폼 "StatsAI"의 SaaS 랜딩 페�
 
 히어로 섹션(hero section)은 화면 높이 100vh를 차지해야 하며,
 브라우저 가장자리로부터 충분한 여백(white space)을 두고 왼쪽 하단에 정렬된 큰 헤드라인을 포함해야 합니다.
-헤드라인은 "INTELLIGENT ANALYTICS, FINALLY." 라고 표시되며,
+헤드라인은 "Data That Speaks For Itself." 라고 표시되며,
 "Try it out"이라는 CTA 버튼이 함께 있어야 합니다.
 
 이 히어로 섹션의 배경에는 최종적으로 unicorn.studio의 인터랙티브한 배경 요소가 포함될 예정입니다.
