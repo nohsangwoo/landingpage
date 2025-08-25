@@ -33,7 +33,7 @@ export function HeroSection() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-24 lg:pb-32 z-20 relative">
           <div className="max-w-4xl">
             {/* Text Background Overlay for better readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent rounded-2xl -z-10"></div>
+            <div className="absolute inset-0 -z-10"></div>
             
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-foreground leading-none mb-6 sm:mb-8 drop-shadow-lg">
@@ -45,7 +45,7 @@ export function HeroSection() {
             </h1>
             
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl drop-shadow-md backdrop-blur-sm bg-background/5 p-4 rounded-xl">
+            <p className="text-lg sm:text-xl mb-8 sm:mb-12 max-w-2xl drop-shadow-md rounded-xl text-gray-500">
               스타트업부터 대기업까지, 각 비즈니스 단계에 맞는 최적의 기술 솔루션을 제공합니다.
               SEO 마케팅 자동화, 풀스택 개발, 클라우드 DevOps까지 토탈 솔루션으로 함께합니다.
             </p>
@@ -65,6 +65,7 @@ export function HeroSection() {
             </Button>
           </div>
         </div>
+        
       </div>
     </section>
   )
