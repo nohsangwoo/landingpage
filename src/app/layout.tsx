@@ -64,11 +64,7 @@ export const metadata: Metadata = {
     description: "SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 검증된 기술 솔루션을 제공합니다.",
     images: ["/logo.png"],
   },
-  verification: {
-    other: {
-      "naver-site-verification": process.env.NAVER_SITE_VERIFICATION || "",
-    },
-  },
+
   alternates: {
     canonical: "https://www.heudy.shop/",
     languages: {
