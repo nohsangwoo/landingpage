@@ -6,11 +6,11 @@
 
 ### SEO 검증 코드
 ```bash
-# Google Search Console 검증 코드
-GOOGLE_SITE_VERIFICATION=your_google_verification_code_here
-
 # Naver Search Advisor 검증 코드  
 NAVER_SITE_VERIFICATION=your_naver_verification_code_here
+
+# 참고: Google Search Console은 GoDaddy DNS에서 직접 인증 완료
+# GOOGLE_SITE_VERIFICATION은 필요 없음
 ```
 
 ### Google Analytics (선택사항)
@@ -34,16 +34,9 @@ NEXT_PUBLIC_COMPANY_PHONE=02-931-9310
 
 ### 1. Google Search Console 설정
 
-1. [Google Search Console](https://search.google.com/search-console) 접속
-2. 속성 추가 → URL 접두사 선택 → 사이트 URL 입력
-3. HTML 태그 방법 선택
-4. `content="..."` 부분의 값을 복사
-5. `.env.local`에 `GOOGLE_SITE_VERIFICATION` 값으로 설정
-
-```bash
-# 예시
-GOOGLE_SITE_VERIFICATION=abc123def456ghi789
-```
+✅ **이미 완료됨**: GoDaddy DNS에서 TXT 레코드로 인증 완료
+- DNS 방식이 HTML 메타 태그보다 더 안전하고 권장됩니다
+- 별도의 환경 변수 설정이 필요하지 않습니다
 
 ### 2. Naver Search Advisor 설정
 
@@ -58,7 +51,7 @@ GOOGLE_SITE_VERIFICATION=abc123def456ghi789
 NAVER_SITE_VERIFICATION=naver123456789
 ```
 
-### 3. Google Analytics 설정
+### 2. Google Analytics 설정
 
 1. [Google Analytics](https://analytics.google.com/) 접속
 2. 계정 생성 → 속성 생성 → 데이터 스트림 설정
@@ -73,8 +66,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-ABC123DEF4
 ## 📝 .env.local 파일 예시
 
 ```bash
-# SEO 검증 코드
-GOOGLE_SITE_VERIFICATION=abc123def456ghi789
+# SEO 검증 코드 (Google은 DNS로 인증 완료)
 NAVER_SITE_VERIFICATION=naver123456789
 
 # Google Analytics

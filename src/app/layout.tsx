@@ -65,7 +65,6 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || "",
     other: {
       "naver-site-verification": process.env.NAVER_SITE_VERIFICATION || "",
     },
