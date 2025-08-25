@@ -17,7 +17,6 @@ const nextConfig: NextConfig = {
   
   // 실험적 기능
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
   },
   
@@ -25,7 +24,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           {
             key: 'X-Frame-Options',
@@ -55,7 +54,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(png|jpg|jpeg|gif|svg|webp|ico))',
+        source: '/:path*.(png|jpg|jpeg|gif|svg|webp|ico)',
         headers: [
           {
             key: 'Cache-Control',
@@ -64,7 +63,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(css|js))',
+        source: '/:path*.(css|js)',
         headers: [
           {
             key: 'Cache-Control',

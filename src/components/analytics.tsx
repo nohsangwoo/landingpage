@@ -1,34 +1,12 @@
 "use client"
 
-import { useEffect } from 'react'
 import Script from 'next/script'
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
-}
 
 interface AnalyticsProps {
   measurementId?: string
 }
 
 export function Analytics({ measurementId }: AnalyticsProps) {
-  useEffect(() => {
-    if (measurementId && typeof window !== 'undefined') {
-      window.gtag = window.gtag || function() {
-        (window.gtag as any).q = (window.gtag as any).q || []
-        ;(window.gtag as any).q.push(arguments)
-      }
-      ;(window.gtag as any).l = +new Date()
-
-      window.gtag('config', measurementId, {
-        page_title: document.title,
-        page_location: window.location.href,
-      })
-    }
-  }, [measurementId])
-
   if (!measurementId) {
     return null
   }
@@ -61,20 +39,30 @@ export function Analytics({ measurementId }: AnalyticsProps) {
   )
 }
 
+// 글로벌 gtag 타입 선언
+declare global {
+  interface Window {
+    gtag?: (...args: string[] | [string, string, Record<string, unknown>]) => void
+  }
+}
+
 // 페이지 뷰 추적 함수
 export function trackPageView(url: string, title?: string) {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!, {
-      page_location: url,
-      page_title: title || document.title,
-    })
+    const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+    if (measurementId) {
+      window.gtag('config', measurementId, {
+        page_location: url,
+        page_title: title || document.title,
+      })
+    }
   }
 }
 
 // 이벤트 추적 함수
 export function trackEvent(
   action: string,
-  category: string = 'general',
+  category = 'general',
   label?: string,
   value?: number
 ) {
