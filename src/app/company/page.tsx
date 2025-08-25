@@ -1,8 +1,28 @@
+import { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "회사소개 - 주식회사 럿지 | 신뢰할 수 있는 기술 파트너",
+  description: "주식회사 럿지는 혁신적인 기술 솔루션으로 고객의 비즈니스 성장을 돕는 기술 전문 기업입니다. 법인명: 주식회사 럿지(LUDGI Inc.), 대표자: 노상우, 설립연도: 2024년, 사업자번호: 307-88-03283",
+  keywords: ["주식회사 럿지", "LUDGI Inc", "회사소개", "기업정보", "기술 전문 기업", "SEO", "AI", "클라우드", "개발", "노상우", "사업자번호 307-88-03283"],
+  openGraph: {
+    title: "회사소개 - 주식회사 럿지 | 신뢰할 수 있는 기술 파트너",
+    description: "주식회사 럿지는 혁신적인 기술 솔루션으로 고객의 비즈니스 성장을 돕는 기술 전문 기업입니다.",
+    url: "https://www.heudy.shop/company",
+    type: "website",
+  },
+  twitter: {
+    title: "회사소개 - 주식회사 럿지 | 신뢰할 수 있는 기술 파트너",
+    description: "주식회사 럿지는 혁신적인 기술 솔루션으로 고객의 비즈니스 성장을 돕는 기술 전문 기업입니다.",
+  },
+  alternates: {
+    canonical: "https://www.heudy.shop/company",
+  },
+}
 
 export default function CompanyPage() {
   return (
