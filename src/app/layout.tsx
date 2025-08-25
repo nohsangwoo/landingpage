@@ -13,10 +13,10 @@ const notoSansKR = Noto_Sans_KR({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.heudy.shop'),
   title: {
-    default: "주식회사 럿지 - 스타트업부터 대기업까지, 각 비즈니스 단계에 맞는 최적의 기술 솔루션을 제공합니다 | 백링크 SEO 최적화 플랫폼",
+    default: "주식회사 럿지 - 혁신적인 기술 솔루션 전문기업",
     template: "%s | 주식회사 럿지"
   },
-  description: "주식회사 럿지는 혁신적인 기술 솔루션으로 비즈니스의 미래를 만들어갑니다. SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축, 스타트업 컨설팅, 기업 아웃소싱 등 완료 프로젝트 50+, 고객 만족도 98%, 기술 스택 30+, 팀 멤버 15+로 검증된 전문성을 제공합니다.",
+  description: "SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 검증된 기술 솔루션을 제공합니다.",
   keywords: ["아웃소싱", "인프런", "외주 개발사", "럿지", "주식회사 럿지", "SEO", "마케팅 자동화", "풀스택 개발", "클라우드", "DevOps", "SaaS", "AI", "백링크", "LUDGI", "스타트업", "컨설팅", "웹 개발", "앱 개발", "기술 솔루션"],
   authors: [{ name: "주식회사 럿지", url: "https://www.heudy.shop" }],
   creator: "주식회사 럿지",
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: "https://www.heudy.shop/",
     siteName: "주식회사 럿지",
-    title: "주식회사 럿지 - 스타트업부터 대기업까지, 각 비즈니스 단계에 맞는 최적의 기술 솔루션을 제공합니다",
-    description: "주식회사 럿지는 혁신적인 기술 솔루션으로 비즈니스의 미래를 만들어갑니다. SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 완료 프로젝트 50+, 고객 만족도 98%로 검증된 전문성을 제공합니다.",
+    title: "주식회사 럿지 - 혁신적인 기술 솔루션 전문기업",
+    description: "SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 검증된 기술 솔루션을 제공합니다.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "주식회사 럿지 - 스타트업부터 대기업까지, 각 비즈니스 단계에 맞는 최적의 기술 솔루션을 제공합니다",
+        alt: "주식회사 럿지 - 혁신적인 기술 솔루션 전문기업",
         type: "image/png",
       },
     ],
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "https://x.com/bknil_offitial",
     creator: "https://x.com/bknil_offitial",
-    title: "주식회사 럿지 - 스타트업부터 대기업까지, 각 비즈니스 단계에 맞는 최적의 기술 솔루션을 제공합니다",
-    description: "주식회사 럿지는 혁신적인 기술 솔루션으로 비즈니스의 미래를 만들어갑니다. SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 완료 프로젝트 50+, 고객 만족도 98%로 검증된 전문성을 제공합니다.",
+    title: "주식회사 럿지 - 혁신적인 기술 솔루션 전문기업",
+    description: "SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 검증된 기술 솔루션을 제공합니다.",
     images: ["/logo.png"],
   },
   verification: {
@@ -121,7 +121,7 @@ export default function RootLayout({
               "name": "주식회사 럿지",
               "alternateName": "LUDGI Inc.",
               "url": "https://www.heudy.shop/",
-              "description": "주식회사 럿지는 혁신적인 기술 솔루션으로 비즈니스의 미래를 만들어갑니다. SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 완료 프로젝트 50+, 고객 만족도 98%로 검증된 전문성을 제공합니다.",
+              "description": "SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 검증된 기술 솔루션을 제공합니다.",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
@@ -146,7 +146,7 @@ export default function RootLayout({
               "url": "https://www.heudy.shop/",
               "logo": "https://www.heudy.shop/logo.png",
               "image": "https://www.heudy.shop/logo.png",
-              "description": "주식회사 럿지는 혁신적인 기술 솔루션으로 비즈니스의 미래를 만들어갑니다. SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축, 스타트업 컨설팅, 기업 아웃소싱 등 완료 프로젝트 50+, 고객 만족도 98%, 기술 스택 30+, 팀 멤버 15+로 검증된 전문성을 제공합니다.",
+              "description": "SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축, 스타트업 컨설팅, 기업 아웃소싱 등 검증된 기술 솔루션을 제공합니다.",
               "foundingDate": "2024",
               "founder": {
                 "@type": "Person",
