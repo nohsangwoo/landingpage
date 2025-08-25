@@ -83,11 +83,17 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Separate Company Page Link */}
-        <div className="hidden md:flex">
+        {/* Separate Pages Links */}
+        <div className="hidden md:flex items-center space-x-0">
+          <Link 
+            href="/blog"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors border-l border-border ml-4 pl-4"
+          >
+            Blog
+          </Link>
           <Link 
             href="/company"
-            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors border-l border-border ml-4 pl-4"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Company
           </Link>
@@ -150,11 +156,17 @@ export function Navbar() {
                 </Link>
               </div>
 
-              {/* Separate Company Page */}
+              {/* Separate Pages */}
               <div className="pt-4 border-t space-y-2">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-3">
                   페이지
                 </p>
+                <Link 
+                  href="/blog" 
+                  className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
+                >
+                  Blog
+                </Link>
                 <Link 
                   href="/company" 
                   className="block px-3 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md bg-muted/50"
