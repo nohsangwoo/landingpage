@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     description: "주식회사 럿지는 혁신적인 기술 솔루션으로 비즈니스의 미래를 만들어갑니다. SEO & 마케팅 자동화, 풀스택 개발, 클라우드 & DevOps, SaaS 플랫폼 구축 등 완료 프로젝트 50+, 고객 만족도 98%로 검증된 전문성을 제공합니다.",
     images: [
       {
-        url: "/logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "주식회사 럿지 - 스타트업부터 대기업까지, 각 비즈니스 단계에 맞는 최적의 기술 솔루션을 제공합니다",
